@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>hello</title>
+        <style>
+        body{
+            padding: 25px;
+            background-color: white;
+            color: black; }
+            img{
+                height: 40px;
+                width: 40px;
+                 border-radius: 50%;
+                 outline: none;
+                 outline-color:rgb(228, 228, 216) ;
+                 position:absolute;
+                 top: 10px;
+                 right: 10px;
+            }
+            .dark{
+                background-color: black;
+                color: white;
+
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+             
+              function hello()
+              { var icon=document.getElementById("icon");
+              let issun =true;
+                var x= document.body;
+                x.classList.toggle("dark");
+               if(issun==true)
+               {
+                icon.src="moon.png";
+                issun=false;
+               }
+               else{
+                icon.src="moon.png"
+                
+               }
+              }  
+              
+            
+        </script>
+
+        <h1>Hello...</h1>
+        <p> Dark And Light Mode</p><br>
+        <img src="sun.png" onclick="hello()" id="icon">
+    </body>
+</html>

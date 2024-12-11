@@ -1,0 +1,45 @@
+/* styles.css */
+
+/* Default light theme */
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --button-background: #f0f0f0;
+  --button-text-color: #000000;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --background-color: #1e1e1e;
+  --text-color: #ffffff;
+  --button-background: #333333;
+  --button-text-color: #ffffff;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.theme-toggle-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+button {
+  background-color: var(--button-background);
+  color: var(--button-text-color);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+button:hover {
+  opacity: 0.8;
+}

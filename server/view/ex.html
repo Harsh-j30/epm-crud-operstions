@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Navigation Scrolling</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fa8b8b;
+  padding: 10px 0;
+  text-align: center;
+  z-index: 100;
+}
+
+.navbar a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+  color: rgb(37, 168, 201);
+}
+
+.section {
+  height: 27vh;
+  padding: 200px;
+  border-bottom: 1px solid #ddd;
+}
+
+#section1 {
+  background-color: #f4f4f4;
+}
+
+#section2 {
+  background-color: #ddd;
+}
+
+#section3 {
+  background-color: #bbb;
+}
+
+#section4 {
+  background-color: #999;
+}
+
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="#section1">Section 1</a>
+    <a href="#section2">Section 2</a>
+    <a href="#section3">Section 3</a>
+    <a href="#section4">Section 4</a>
+  </nav>
+
+  <div id="section1" class="section">Section 1 Content</div>
+  <div id="section2" class="section">Section 2 Content</div>
+  <div id="section3" class="section">Section 3 Content</div>
+  <div id="section4" class="section">Section 4 Content</div>
+
+  <script>document.querySelectorAll('.navbar a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+  
+      const targetId = this.getAttribute('href').substring(1);
+      const targetSection = document.getElementById(targetId);
+  
+      window.scrollTo({
+        top: targetSection.offsetTop,
+        behavior: 'smooth'
+      });
+    });
+  });
+  </script>
+</body>
+</html>

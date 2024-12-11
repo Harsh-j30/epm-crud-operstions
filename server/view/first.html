@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+
+<head>
+    <script>
+        function hiThere() {
+            alert('Hi there!');
+        }
+
+        function hello(){
+           let text= document.getElementById("input").value;
+           document.getElementById("test").innerHTML=text;
+
+            console.log(`Hello `  )
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" onchange="hello()" id ="input" >
+    <p id ="test"></p>
+    <button type="button" 
+            onclick="hiThere()" 
+            style="margin-left: 50%;">
+            Click me event
+    </button>
+</body>
+
+</html>
